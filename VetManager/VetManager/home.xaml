@@ -2,36 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             xmlns:converters="clr-namespace:Syncfusion.SfCalendar.XForms.Converters;assembly=Syncfusion.SfCalendar.XForms"
              x:Class="VetManager.home">
     <ContentPage.Content>
         <Grid>
             <!-- Contenido principal de la página -->
+            <syncfusion:SfCalendar HeightRequest="200" WidthRequest="200" />
 
             <!-- Botón para mostrar/ocultar el menú -->
             <Button Text="☰"
-                    FontSize="24"
-                    BackgroundColor="#2196F3"
-                    TextColor="White"
-                    HorizontalOptions="Start"
-                    VerticalOptions="Start"
-                    Margin="10"
-                    Clicked="ToggleMenuButton_Clicked"
-                    Grid.Row="0" />
+        FontSize="24"
+        BackgroundColor="#2196F3"
+        TextColor="White"
+        HorizontalOptions="End"
+        VerticalOptions="Start"
+        Margin="10"
+        Clicked="ToggleMenuButton_Clicked"
+        Grid.Row="0" />
 
             <!-- Menú desplegable -->
             <pancake:PancakeView x:Name="menuFrame"
-                                 BackgroundColor="#2196F3"
-                                 CornerRadius="10"
-                                 Padding="10"
-                                 IsVisible="False"
-                                 AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional"
-                                 AbsoluteLayout.LayoutBounds="1,0,0.6,1"
-                                 Grid.Row="0">
+                     BackgroundColor="#2196F3"
+                     CornerRadius="10"
+                     Padding="10"
+                     IsVisible="False"
+                     AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional"
+                     AbsoluteLayout.LayoutBounds="0.4,0,1,1"
+                     Grid.Row="0">
                 <!-- Contenido del menú -->
                 <StackLayout Spacing="10">
-                    <Label Text="Opción 1" TextColor="White" FontSize="18" HorizontalOptions="Center" />
-                    <Label Text="Opción 2" TextColor="White" FontSize="18" HorizontalOptions="Center" />
-                    <Label Text="Opción 3" TextColor="White" FontSize="18" HorizontalOptions="Center" />
+                    <Label Text="Administrar Citas" TextColor="White" FontSize="18" HorizontalOptions="Center" />
+                    <Label Text="Calcular IMC" TextColor="White" FontSize="18" HorizontalOptions="Center" />
+                    <Label Text="Acerca de" TextColor="White" FontSize="18" HorizontalOptions="Center" />
                 </StackLayout>
             </pancake:PancakeView>
         </Grid>

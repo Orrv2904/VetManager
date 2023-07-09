@@ -18,6 +18,7 @@ namespace VetManager
         public home()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void MenuButton_Tapped(object sender, EventArgs e)
@@ -33,10 +34,12 @@ namespace VetManager
             if (menuFrame.IsVisible)
             {
                 toggleMenuButton.BackgroundColor = Color.White;
+                menuFrame.Opacity = 0.7; // Ajusta el valor de opacidad aquí
             }
             else
             {
                 toggleMenuButton.BackgroundColor = Color.FromHex("#2196F3");
+                menuFrame.Opacity = 1.0; // Restaura la opacidad original
             }
         }
     }
