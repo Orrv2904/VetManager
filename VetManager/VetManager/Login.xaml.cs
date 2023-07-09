@@ -19,6 +19,11 @@ namespace VetManager
             InitializeComponent();
         }
 
+        private async void RegisterButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Register());
+        }
+
         private void LoginButton_Clicked(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(emailEntry.Text) || string.IsNullOrWhiteSpace(passwordEntry.Text))
