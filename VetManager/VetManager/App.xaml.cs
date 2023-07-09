@@ -15,6 +15,7 @@ namespace VetManager
 
         protected override void OnStart()
         {
+            MainPage = new Login();
         }
 
         protected override void OnSleep()
